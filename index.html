@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+<<<<<<< HEAD
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cat Lover World 🐱</title>
   <style>
@@ -62,10 +63,53 @@
       margin-top: 15px;
       font-style: italic;
       color: #555;
+=======
+  <title>Counter Program</title>
+  <style>
+    body {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #0f172a;
+      font-family: Arial, sans-serif;
+    }
+
+    .counter-box {
+      background: #1e293b;
+      padding: 30px;
+      border-radius: 12px;
+      text-align: center;
+      color: white;
+      width: 300px;
+    }
+
+    h1 {
+      font-size: 50px;
+      margin: 20px 0;
+    }
+
+    button {
+      padding: 10px 15px;
+      margin: 5px;
+      font-size: 16px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    .inc { background: #22c55e; }
+    .dec { background: #ef4444; }
+    .reset { background: #3b82f6; }
+
+    button:hover {
+      opacity: 0.8;
+>>>>>>> 23a8765c563301544db784c32a80fc628422306b
     }
   </style>
 </head>
 <body>
+<<<<<<< HEAD
   <h1>Welcome Cat Lover! 🐱</h1>
 
   <div class="cat-card">
@@ -89,5 +133,37 @@
       document.getElementById('cat-fact').textContent = catFacts[randomIndex];
     }
   </script>
+=======
+
+  <div class="counter-box">
+    <h2>Counter</h2>
+    <h1 id="count">0</h1>
+
+    <button class="inc" onclick="increment()">+</button>
+    <button class="dec" onclick="decrement()">-</button>
+    <button class="reset" onclick="reset()">Reset</button>
+  </div>
+
+  <script>
+    let count = 0;
+    const countEl = document.getElementById("count");
+
+    function increment() {
+      count++;
+      countEl.innerText = count;
+    }
+
+    function decrement() {
+      count--;
+      countEl.innerText = count;
+    }
+
+    function reset() {
+      count = 0;
+      countEl.innerText = count;
+    }
+  </script>
+
+>>>>>>> 23a8765c563301544db784c32a80fc628422306b
 </body>
 </html>
