@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cat Lover World 🐱</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #fff0f5;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+    }
+
+    h1 {
+      color: #ff69b4;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .cat-card {
+      background: #fff;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+      width: 300px;
+      margin-bottom: 20px;
+      padding: 20px;
+      text-align: center;
+      transition: transform 0.3s;
+    }
+
+    .cat-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .cat-card img {
+      width: 100%;
+      border-radius: 12px;
+      margin-bottom: 15px;
+    }
+
+    button {
+      background-color: #ff69b4;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background-color: #e0559f;
+    }
+
+    .fact {
+      margin-top: 15px;
+      font-style: italic;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+  <h1>Welcome Cat Lover! 🐱</h1>
+
+  <div class="cat-card">
+    <img src="https://images.unsplash.com/photo-1592194996308-7b43878e84a6?auto=format&fit=crop&w=600&q=60" alt="Cat 1">
+    <h2>Fluffy Cat</h2>
+    <button onclick="showFact()">Show Fun Cat Fact</button>
+    <p class="fact" id="cat-fact"></p>
+  </div>
+
+  <script>
+    const catFacts = [
+      "Cats sleep for 12-16 hours a day!",
+      "A group of cats is called a clowder.",
+      "Cats have five toes on their front paws but only four on their back paws.",
+      "Cats can rotate their ears 180 degrees.",
+      "A cat’s nose print is unique, like a human fingerprint."
+    ];
+
+    function showFact() {
+      const randomIndex = Math.floor(Math.random() * catFacts.length);
+      document.getElementById('cat-fact').textContent = catFacts[randomIndex];
+    }
+  </script>
+</body>
+</html>
